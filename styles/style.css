@@ -13,4 +13,9 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font)
+}
+
+.header {
+  font-family: var(--accent-font);
 }
