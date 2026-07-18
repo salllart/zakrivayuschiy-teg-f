@@ -12,4 +12,6 @@
   --main-font-wght: 410;
   --card-title-wght: 715;
   --text-stroke-color: #fff;
+  --contour-color: #000;
+  --animation-fill-color: red;
 }
