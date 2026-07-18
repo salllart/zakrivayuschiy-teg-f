@@ -24,6 +24,10 @@
   background-attachment: fixed;
 }
 
+.page:has(.dialog[open]) {
+  overflow: hidden;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -50,6 +54,7 @@
 .header__main-title {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-align: center;
+  text-transform: uppercase;
 }
 
 .content {
@@ -68,11 +73,40 @@
 
 .card__image-wrapper {
   position: relative;
+  overflow: hidden;
 }
 
 .card__image {
   display: block;
   width: 100%;
+}
+
+.white-eyes {
+  filter: blur(1px);
+}
+
+.confidence {
+  filter: grayscale(60%) invert(100%);
+}
+
+.wind-power-plant {
+  filter: hue-rotate(180deg);
+}
+
+.the-thinker {
+  filter: brightness(49%);
+}
+
+.relieved-face {
+  filter:  contrast(150%);
+}
+
+.determination {
+  filter: saturate(70%);
+}
+
+.focused {
+  filter:invert(100%);
 }
 
 .card__label {
@@ -83,6 +117,7 @@
   font-size: 14px;
   opacity: 0.5;
   mix-blend-mode: hard-light;
+  text-transform: uppercase;
   text-shadow:
     1px 0 0 var(--text-stroke-color),
     0 1px 0 var(--text-stroke-color),
@@ -125,6 +160,10 @@
   padding: 0;
 }
 
+.like-icon {
+  width: 39px;
+}
+
 .card__like-button {
   inline-size: 130px;
   block-size: 38px;
@@ -134,7 +173,11 @@
   display: flex;
   gap: 8px;
   align-items: center;
-  padding: 16px 17px;
+  padding: 16px 20px;
+}
+
+.button-to-save__icon {
+  width: 21px;
 }
 
 .dialog[open] {
@@ -153,11 +196,30 @@
   line-height: 150%;
 }
 
+.dialog__icon {
+  width: 39px;
+}
+
 .dialog__button {
+  text-transform: uppercase;
   grid-column: 1 / -1;
   block-size: 38px;
 }
 
 .dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
+}
+
+@media (width <= 375px) {
+  .dialog[open] {
+    padding: 30px 40px;
+  }
+
+  .button-to-save {
+    flex-direction: column;
+  }
+
+  .button-to-save__icon {
+    width: 28px;
+  }
 }
