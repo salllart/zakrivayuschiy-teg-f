@@ -9,7 +9,7 @@
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
     linear-gradient(#e7e7e7 0.01%, #1a1a1a);
   --rubber-width: clamp(375px, 16.2852rem + 30.5164vw, 43.75rem);
-  --header-padding-top-bottom: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem);
+  --header-padding-block: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem);
   --main-font-wght: 410;
   --card-title-wght: 715;
   --text-stroke-color: #fff;
